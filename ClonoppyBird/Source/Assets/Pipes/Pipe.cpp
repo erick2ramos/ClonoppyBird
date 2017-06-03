@@ -3,6 +3,7 @@
 #include "Vector2.h"
 #include "Game.h"
 #include "PipeBehavior.h"
+#include "BoxCollider.h"
 
 Pipe::Pipe() :
 	GameEntity()
@@ -51,5 +52,9 @@ void Pipe::SetUp()
 		if (i == 1) {
 			(*sr).flip = SDL_FLIP_VERTICAL;
 		}
+		
+		BoxCollider* collider = (BoxCollider*)pipeHolder[i].AddComponent<BoxCollider>();
+		collider->w = 53 * pipeHolder[i].transform.scale.x;
+		collider->h = 320 * pipeHolder[i].transform.scale.y;
 	}
 }

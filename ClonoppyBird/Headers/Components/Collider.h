@@ -12,7 +12,10 @@ public:
 	~Collider();
 
 	static list<Collider*> colliders;
-	static void CheckCollisions();
+	static bool CheckCollisions(Collider* col);
 
 	virtual bool CollideWith(Collider* other);
+
+protected:
+	virtual void Update() {};
 };

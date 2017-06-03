@@ -24,10 +24,7 @@ PipeHandler::~PipeHandler()
 void PipeHandler::UpdateComponents()
 {
 	GameEntity::UpdateComponents();
-
-	if (player->bm == NULL || !player->bm->started)
-		return;
-
+	
 	for (list<GameEntity*>::iterator it = pipes.begin(); it != pipes.end(); ++it)
 	{
 		if ((*it)->active)
@@ -35,6 +32,10 @@ void PipeHandler::UpdateComponents()
 			(*it)->UpdateComponents();
 		}
 	}
+
+	if (player->bm == NULL || !player->bm->started)
+		return;
+
 
 	timer += Time::GetDelta();
 	if (timer >= spawnCooldown) 

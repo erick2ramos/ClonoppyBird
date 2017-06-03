@@ -24,4 +24,7 @@ void Floor::SetUp()
 	});
 	AddComponent<Parallax>();
 	transform.scale = Vector2(1.79, 1);
+	collider = (BoxCollider*)AddComponent<BoxCollider>();
+	collider->w = 336 * transform.scale.x;
+	collider->h = 112 * transform.scale.y;
 }

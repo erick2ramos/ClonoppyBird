@@ -1,4 +1,6 @@
 #include "BirdMovement.h"
+#include "Bird.h"
+#include "Collider.h"
 
 BirdMovement::BirdMovement() : GameComponent()
 {
@@ -13,7 +15,7 @@ BirdMovement::~BirdMovement()
 
 void BirdMovement::Start()
 {
-	transform->scale = transform->scale * 0.5f;
+
 }
 
 void BirdMovement::Update()
@@ -24,6 +26,7 @@ void BirdMovement::Update()
 		started = true;
 		velocity.y = speed;
 	}
+
 	ProcessMovement();
 }
 
@@ -31,9 +34,16 @@ void BirdMovement::ProcessMovement()
 {
 	if(started)
 	{
-		velocity = (velocity + gravity * 50.0f * Time::GetDelta());
-		direction = direction + velocity;
-		transform->rotation.z = atan2(direction.y, direction.x) * 180 / M_PI;
-		transform->position = transform->position + (velocity * Time::GetDelta());
+		if (!Collider::CheckCollisions(((Bird*)gameObject)->collider))
+		{
+			velocity = (velocity + gravity * 50.0f * Time::GetDelta());
+			direction = direction + velocity;
+			transform->rotation.z = atan2(direction.y, direction.x) * 180 / M_PI;
+			transform->position = transform->position + (velocity * Time::GetDelta());
+		}
+		else
+		{
+			started = false;
+		}
 	}
 }

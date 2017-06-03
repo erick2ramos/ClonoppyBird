@@ -120,10 +120,12 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="01_hello_SDL.cpp" />
+    <ClCompile Include="Source\Components\BoxCollider.cpp" />
     <ClCompile Include="Source\Assets\Enviroment\Background.cpp" />
     <ClCompile Include="Source\Assets\Bird\Bird.cpp" />
     <ClCompile Include="Source\Assets\Bird\BirdMovement.cpp" />
     <ClCompile Include="Source\Assets\Enviroment\Floor.cpp" />
+    <ClCompile Include="Source\Components\Collider.cpp" />
     <ClCompile Include="Source\Game.cpp" />
     <ClCompile Include="Source\Entity\GameComponent.cpp" />
     <ClCompile Include="Source\Entity\GameEntity.cpp" />
@@ -141,10 +143,12 @@
     <ClCompile Include="Source\Managers\Time.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Headers\Components\BoxCollider.h" />
     <ClInclude Include="Headers\Assets\Enviroment\Background.h" />
     <ClInclude Include="Headers\Assets\Bird\Bird.h" />
     <ClInclude Include="Headers\Assets\Bird\BirdMovement.h" />
     <ClInclude Include="Headers\Assets\Enviroment\Floor.h" />
+    <ClInclude Include="Headers\Components\Collider.h" />
     <ClInclude Include="Headers\Game.h" />
     <ClInclude Include="Headers\Entity\GameComponent.h" />
     <ClInclude Include="Headers\Entity\GameEntity.h" />

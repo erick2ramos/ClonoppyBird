@@ -125,6 +125,12 @@
     <ClCompile Include="Source\Game.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Source\Components\Collider.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Components\BoxCollider.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="resource.h">
@@ -188,6 +194,12 @@
       <Filter>Header</Filter>
     </ClInclude>
     <ClInclude Include="Headers\Typedefs.h">
+      <Filter>Header</Filter>
+    </ClInclude>
+    <ClInclude Include="Headers\Components\Collider.h">
+      <Filter>Header</Filter>
+    </ClInclude>
+    <ClInclude Include="Headers\Components\BoxCollider.h">
       <Filter>Header</Filter>
     </ClInclude>
   </ItemGroup>

@@ -3,6 +3,7 @@
 #include <SDL.h>
 #include "Vector2.h"
 #include "GameEntity.h"
+#include "Bird.h"
 
 using namespace std;
 
@@ -12,6 +13,7 @@ public:
 	PipeHandler(int mP);
 	~PipeHandler();
 
+	void SetUp();
 	void UpdateComponents();
 
 private:
@@ -21,6 +23,7 @@ private:
 	float timer;
 
 	list<GameEntity*> pipes;
+	Bird* player;
 
 	GameEntity* CreatePipe();
 };

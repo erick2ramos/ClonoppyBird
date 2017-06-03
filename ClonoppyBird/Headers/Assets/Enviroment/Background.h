@@ -6,4 +6,6 @@ class Background : public GameEntity
 public:
 	Background();
 	~Background();
+
+	void SetUp();
 };

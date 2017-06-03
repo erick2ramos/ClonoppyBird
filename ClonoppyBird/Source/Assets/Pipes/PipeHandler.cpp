@@ -25,6 +25,9 @@ void PipeHandler::UpdateComponents()
 {
 	GameEntity::UpdateComponents();
 
+	if (player->bm == NULL || !player->bm->started)
+		return;
+
 	for (list<GameEntity*>::iterator it = pipes.begin(); it != pipes.end(); ++it)
 	{
 		if ((*it)->active)
@@ -55,4 +58,14 @@ GameEntity* PipeHandler::CreatePipe()
 	Pipe* newPipe = new Pipe();
 	(*newPipe).active = false;
 	return newPipe;
+}
+
+void PipeHandler::SetUp()
+{
+	player = (Bird*)GameEntity::Find("Bird");
+	for (list<GameEntity*>::iterator it = pipes.begin(); it != pipes.end(); ++it)
+	{
+		(*it)->SetUp();
+	}
+	GameEntity::SetUp();
 }

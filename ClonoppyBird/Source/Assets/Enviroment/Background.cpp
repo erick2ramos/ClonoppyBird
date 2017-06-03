@@ -6,17 +6,22 @@
 
 Background::Background()
 {
+	
+}
+
+Background::~Background()
+{
+
+}
+
+void Background::SetUp()
+{
 	SpriteRenderer* sr = (SpriteRenderer*)AddComponent<SpriteRenderer>();
-	sr->LoadSprite("FB_Atlas.png");
+	sr->LoadSprite("Resources/FB_Atlas.png");
 	sr->origRect = new SDL_Rect({
 		0, 0,
 		287, 512
 	});
 	AddComponent<Parallax>();
 	transform.scale = Vector2(2.091, 2);
-}
-
-Background::~Background()
-{
-
 }

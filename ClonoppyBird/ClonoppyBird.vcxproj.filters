@@ -5,30 +5,14 @@
       <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
       <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
     </Filter>
-    <Filter Include="Header Files">
-      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
-      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
-    </Filter>
     <Filter Include="Source Files\Entity">
       <UniqueIdentifier>{3f9e263b-17d8-4fec-8b0c-ec1e8c97cca0}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Header Files\Entity">
-      <UniqueIdentifier>{25ed3955-afbb-46e2-8f11-63c6ea86af72}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Header Files\Math">
-      <UniqueIdentifier>{b56284ed-aa9e-4266-a010-bfafa424986e}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source Files\Math">
       <UniqueIdentifier>{8667b717-bdb1-4fca-8de3-deaee5546ac1}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\Components">
-      <UniqueIdentifier>{c31186d9-79bb-4227-bbf1-9514cc05fa09}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Source Files\Components">
       <UniqueIdentifier>{1c8e4401-9426-4167-a0ed-6ae4754b9b73}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Header Files\Managers">
-      <UniqueIdentifier>{e06644b1-c4c5-4044-bc8f-abdc25553b4e}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source Files\Managers">
       <UniqueIdentifier>{e57f31de-8247-4b8a-be97-3271dff2733c}</UniqueIdentifier>
@@ -36,23 +20,11 @@
     <Filter Include="Source Files\Scenes">
       <UniqueIdentifier>{d4496117-73c6-4f53-aa4e-197ed8994e9d}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\Scenes">
-      <UniqueIdentifier>{6ddecc03-f3f1-4eee-86a2-53f6b12d846b}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Source Files\Assets">
       <UniqueIdentifier>{29cfab74-a5e5-497e-a469-652642456b88}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source Files\Assets\Bird">
       <UniqueIdentifier>{09e8934e-ae2d-4e25-aadd-3748d4d259f9}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Header Files\Assets">
-      <UniqueIdentifier>{29357126-678a-4f18-a1ca-2d6aeeb39579}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Header Files\Assets\Bird">
-      <UniqueIdentifier>{c941f6c8-19e2-4e40-be32-8f53a1a04908}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Header Files\Assets\Pipes">
-      <UniqueIdentifier>{b436cdd6-767c-4cc0-b080-9d7c5ace9ae0}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source Files\Assets\Pipes">
       <UniqueIdentifier>{964c1f1b-715e-4338-96ac-cb186d78c106}</UniqueIdentifier>
@@ -60,7 +32,35 @@
     <Filter Include="Source Files\Assets\Enviroment">
       <UniqueIdentifier>{58b50204-dc85-4963-bb5a-8892b9de09c6}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\Assets\Enviroment">
+    <Filter Include="Header">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Header\Entity">
+      <UniqueIdentifier>{25ed3955-afbb-46e2-8f11-63c6ea86af72}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header\Math">
+      <UniqueIdentifier>{b56284ed-aa9e-4266-a010-bfafa424986e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header\Components">
+      <UniqueIdentifier>{c31186d9-79bb-4227-bbf1-9514cc05fa09}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header\Managers">
+      <UniqueIdentifier>{e06644b1-c4c5-4044-bc8f-abdc25553b4e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header\Scenes">
+      <UniqueIdentifier>{6ddecc03-f3f1-4eee-86a2-53f6b12d846b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header\Assets">
+      <UniqueIdentifier>{29357126-678a-4f18-a1ca-2d6aeeb39579}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header\Assets\Bird">
+      <UniqueIdentifier>{c941f6c8-19e2-4e40-be32-8f53a1a04908}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header\Assets\Pipes">
+      <UniqueIdentifier>{b436cdd6-767c-4cc0-b080-9d7c5ace9ae0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header\Assets\Enviroment">
       <UniqueIdentifier>{c8c72ede-c258-4f5d-b287-ced1fff29149}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
@@ -68,130 +68,127 @@
     <ClCompile Include="01_hello_SDL.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Game.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="Source\Assets\Bird\Bird.cpp">
+      <Filter>Source Files\Assets\Bird</Filter>
     </ClCompile>
-    <ClCompile Include="Vector2.cpp">
-      <Filter>Source Files\Math</Filter>
+    <ClCompile Include="Source\Assets\Bird\BirdMovement.cpp">
+      <Filter>Source Files\Assets\Bird</Filter>
     </ClCompile>
-    <ClCompile Include="GameComponent.cpp">
-      <Filter>Source Files\Entity</Filter>
+    <ClCompile Include="Source\Assets\Enviroment\Background.cpp">
+      <Filter>Source Files\Assets\Enviroment</Filter>
     </ClCompile>
-    <ClCompile Include="GameEntity.cpp">
-      <Filter>Source Files\Entity</Filter>
+    <ClCompile Include="Source\Assets\Enviroment\Floor.cpp">
+      <Filter>Source Files\Assets\Enviroment</Filter>
     </ClCompile>
-    <ClCompile Include="Transform.cpp">
-      <Filter>Source Files\Math</Filter>
+    <ClCompile Include="Source\Assets\Enviroment\Parallax.cpp">
+      <Filter>Source Files\Assets\Enviroment</Filter>
     </ClCompile>
-    <ClCompile Include="SpriteRenderer.cpp">
+    <ClCompile Include="Source\Assets\Pipes\Pipe.cpp">
+      <Filter>Source Files\Assets\Pipes</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Assets\Pipes\PipeBehavior.cpp">
+      <Filter>Source Files\Assets\Pipes</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Assets\Pipes\PipeHandler.cpp">
+      <Filter>Source Files\Assets\Pipes</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Components\SpriteRenderer.cpp">
       <Filter>Source Files\Components</Filter>
     </ClCompile>
-    <ClCompile Include="Bird.cpp">
-      <Filter>Source Files\Assets\Bird</Filter>
+    <ClCompile Include="Source\Entity\GameComponent.cpp">
+      <Filter>Source Files\Entity</Filter>
     </ClCompile>
-    <ClCompile Include="BirdMovement.cpp">
-      <Filter>Source Files\Assets\Bird</Filter>
+    <ClCompile Include="Source\Entity\GameEntity.cpp">
+      <Filter>Source Files\Entity</Filter>
     </ClCompile>
-    <ClCompile Include="Vector3.cpp">
-      <Filter>Source Files\Math</Filter>
-    </ClCompile>
-    <ClCompile Include="Time.cpp">
+    <ClCompile Include="Source\Managers\InputManager.cpp">
       <Filter>Source Files\Managers</Filter>
     </ClCompile>
-    <ClCompile Include="InputManager.cpp">
+    <ClCompile Include="Source\Managers\Time.cpp">
       <Filter>Source Files\Managers</Filter>
     </ClCompile>
-    <ClCompile Include="Scene.cpp">
+    <ClCompile Include="Source\Math\Transform.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Math\Vector2.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Math\Vector3.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Scenes\MainScene.cpp">
       <Filter>Source Files\Scenes</Filter>
     </ClCompile>
-    <ClCompile Include="MainScene.cpp">
+    <ClCompile Include="Source\Scenes\Scene.cpp">
       <Filter>Source Files\Scenes</Filter>
     </ClCompile>
-    <ClCompile Include="Pipe.cpp">
-      <Filter>Source Files\Assets\Pipes</Filter>
-    </ClCompile>
-    <ClCompile Include="PipeHandler.cpp">
-      <Filter>Source Files\Assets\Pipes</Filter>
-    </ClCompile>
-    <ClCompile Include="PipeBehavior.cpp">
-      <Filter>Source Files\Assets\Pipes</Filter>
-    </ClCompile>
-    <ClCompile Include="Floor.cpp">
-      <Filter>Source Files\Assets\Enviroment</Filter>
-    </ClCompile>
-    <ClCompile Include="Background.cpp">
-      <Filter>Source Files\Assets\Enviroment</Filter>
-    </ClCompile>
-    <ClCompile Include="Parallax.cpp">
-      <Filter>Source Files\Assets\Enviroment</Filter>
+    <ClCompile Include="Source\Game.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Game.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="GameEntity.h">
-      <Filter>Header Files\Entity</Filter>
-    </ClInclude>
-    <ClInclude Include="GameComponent.h">
-      <Filter>Header Files\Entity</Filter>
-    </ClInclude>
-    <ClInclude Include="Typedefs.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Vector2.h">
-      <Filter>Header Files\Math</Filter>
-    </ClInclude>
-    <ClInclude Include="Transform.h">
-      <Filter>Header Files\Math</Filter>
-    </ClInclude>
-    <ClInclude Include="SpriteRenderer.h">
-      <Filter>Header Files\Components</Filter>
-    </ClInclude>
     <ClInclude Include="resource.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header</Filter>
     </ClInclude>
-    <ClInclude Include="Vector3.h">
-      <Filter>Header Files\Math</Filter>
+    <ClInclude Include="Headers\Assets\Bird\Bird.h">
+      <Filter>Header\Assets\Bird</Filter>
     </ClInclude>
-    <ClInclude Include="Time.h">
-      <Filter>Header Files\Managers</Filter>
+    <ClInclude Include="Headers\Assets\Bird\BirdMovement.h">
+      <Filter>Header\Assets\Bird</Filter>
     </ClInclude>
-    <ClInclude Include="InputManager.h">
-      <Filter>Header Files\Managers</Filter>
+    <ClInclude Include="Headers\Assets\Enviroment\Background.h">
+      <Filter>Header\Assets\Enviroment</Filter>
     </ClInclude>
-    <ClInclude Include="EventListener.h">
-      <Filter>Header Files\Managers</Filter>
+    <ClInclude Include="Headers\Assets\Enviroment\Floor.h">
+      <Filter>Header\Assets\Enviroment</Filter>
     </ClInclude>
-    <ClInclude Include="Scene.h">
-      <Filter>Header Files\Scenes</Filter>
+    <ClInclude Include="Headers\Assets\Enviroment\Parallax.h">
+      <Filter>Header\Assets\Enviroment</Filter>
     </ClInclude>
-    <ClInclude Include="MainScene.h">
-      <Filter>Header Files\Scenes</Filter>
+    <ClInclude Include="Headers\Assets\Pipes\Pipe.h">
+      <Filter>Header\Assets\Pipes</Filter>
     </ClInclude>
-    <ClInclude Include="Bird.h">
-      <Filter>Header Files\Assets\Bird</Filter>
+    <ClInclude Include="Headers\Assets\Pipes\PipeBehavior.h">
+      <Filter>Header\Assets\Pipes</Filter>
     </ClInclude>
-    <ClInclude Include="BirdMovement.h">
-      <Filter>Header Files\Assets\Bird</Filter>
+    <ClInclude Include="Headers\Assets\Pipes\PipeHandler.h">
+      <Filter>Header\Assets\Pipes</Filter>
     </ClInclude>
-    <ClInclude Include="PipeHandler.h">
-      <Filter>Header Files\Assets\Pipes</Filter>
+    <ClInclude Include="Headers\Components\SpriteRenderer.h">
+      <Filter>Header\Components</Filter>
     </ClInclude>
-    <ClInclude Include="Pipe.h">
-      <Filter>Header Files\Assets\Pipes</Filter>
+    <ClInclude Include="Headers\Entity\GameComponent.h">
+      <Filter>Header\Entity</Filter>
     </ClInclude>
-    <ClInclude Include="PipeBehavior.h">
-      <Filter>Header Files\Assets\Pipes</Filter>
+    <ClInclude Include="Headers\Entity\GameEntity.h">
+      <Filter>Header\Entity</Filter>
     </ClInclude>
-    <ClInclude Include="Floor.h">
-      <Filter>Header Files\Assets\Enviroment</Filter>
+    <ClInclude Include="Headers\Managers\InputManager.h">
+      <Filter>Header\Managers</Filter>
     </ClInclude>
-    <ClInclude Include="Background.h">
-      <Filter>Header Files\Assets\Enviroment</Filter>
+    <ClInclude Include="Headers\Managers\Time.h">
+      <Filter>Header\Managers</Filter>
     </ClInclude>
-    <ClInclude Include="Parallax.h">
-      <Filter>Header Files\Assets\Enviroment</Filter>
+    <ClInclude Include="Headers\Math\Transform.h">
+      <Filter>Header</Filter>
+    </ClInclude>
+    <ClInclude Include="Headers\Math\Vector2.h">
+      <Filter>Header</Filter>
+    </ClInclude>
+    <ClInclude Include="Headers\Math\Vector3.h">
+      <Filter>Header</Filter>
+    </ClInclude>
+    <ClInclude Include="Headers\Scenes\MainScene.h">
+      <Filter>Header\Scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="Headers\Scenes\Scene.h">
+      <Filter>Header\Scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="Headers\Game.h">
+      <Filter>Header</Filter>
+    </ClInclude>
+    <ClInclude Include="Headers\Typedefs.h">
+      <Filter>Header</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

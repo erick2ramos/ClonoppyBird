@@ -78,6 +78,7 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>C:\Users\Erick\Documents\Visual Studio 2017\Projects\Clonoppy\ClonoppyBird;C:\Users\Erick\Documents\Visual Studio 2017\Projects\Clonoppy\ClonoppyBird\Headers;C:\Users\Erick\Documents\Visual Studio 2017\Projects\Clonoppy\ClonoppyBird\Headers\Scenes;C:\Users\Erick\Documents\Visual Studio 2017\Projects\Clonoppy\ClonoppyBird\Headers\Math;C:\Users\Erick\Documents\Visual Studio 2017\Projects\Clonoppy\ClonoppyBird\Headers\Managers;C:\Users\Erick\Documents\Visual Studio 2017\Projects\Clonoppy\ClonoppyBird\Headers\Entity;C:\Users\Erick\Documents\Visual Studio 2017\Projects\Clonoppy\ClonoppyBird\Headers\Components;C:\Users\Erick\Documents\Visual Studio 2017\Projects\Clonoppy\ClonoppyBird\Headers\Assets;C:\Users\Erick\Documents\Visual Studio 2017\Projects\Clonoppy\ClonoppyBird\Headers\Assets\Pipes;C:\Users\Erick\Documents\Visual Studio 2017\Projects\Clonoppy\ClonoppyBird\Headers\Assets\Enviroment;C:\Users\Erick\Documents\Visual Studio 2017\Projects\Clonoppy\ClonoppyBird\Headers\Assets\Bird;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <AdditionalDependencies>SDL2.lib;SDL2main.lib;SDL2_image.lib;%(AdditionalDependencies)</AdditionalDependencies>
@@ -119,49 +120,48 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="01_hello_SDL.cpp" />
-    <ClCompile Include="Background.cpp" />
-    <ClCompile Include="Bird.cpp" />
-    <ClCompile Include="BirdMovement.cpp" />
-    <ClCompile Include="Floor.cpp" />
-    <ClCompile Include="Game.cpp" />
-    <ClCompile Include="GameComponent.cpp" />
-    <ClCompile Include="GameEntity.cpp" />
-    <ClCompile Include="InputManager.cpp" />
-    <ClCompile Include="MainScene.cpp" />
-    <ClCompile Include="Parallax.cpp" />
-    <ClCompile Include="Pipe.cpp" />
-    <ClCompile Include="PipeBehavior.cpp" />
-    <ClCompile Include="PipeHandler.cpp" />
-    <ClCompile Include="Scene.cpp" />
-    <ClCompile Include="SpriteRenderer.cpp" />
-    <ClCompile Include="Time.cpp" />
-    <ClCompile Include="Transform.cpp" />
-    <ClCompile Include="Vector2.cpp" />
-    <ClCompile Include="Vector3.cpp" />
+    <ClCompile Include="Source\Assets\Enviroment\Background.cpp" />
+    <ClCompile Include="Source\Assets\Bird\Bird.cpp" />
+    <ClCompile Include="Source\Assets\Bird\BirdMovement.cpp" />
+    <ClCompile Include="Source\Assets\Enviroment\Floor.cpp" />
+    <ClCompile Include="Source\Game.cpp" />
+    <ClCompile Include="Source\Entity\GameComponent.cpp" />
+    <ClCompile Include="Source\Entity\GameEntity.cpp" />
+    <ClCompile Include="Source\Managers\InputManager.cpp" />
+    <ClCompile Include="Source\Scenes\MainScene.cpp" />
+    <ClCompile Include="Source\Assets\Enviroment\Parallax.cpp" />
+    <ClCompile Include="Source\Assets\Pipes\Pipe.cpp" />
+    <ClCompile Include="Source\Assets\Pipes\PipeBehavior.cpp" />
+    <ClCompile Include="Source\Assets\Pipes\PipeHandler.cpp" />
+    <ClCompile Include="Source\Scenes\Scene.cpp" />
+    <ClCompile Include="Source\Math\Transform.cpp" />
+    <ClCompile Include="Source\Math\Vector2.cpp" />
+    <ClCompile Include="Source\Math\Vector3.cpp" />
+    <ClCompile Include="Source\Components\SpriteRenderer.cpp" />
+    <ClCompile Include="Source\Managers\Time.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Background.h" />
-    <ClInclude Include="Bird.h" />
-    <ClInclude Include="BirdMovement.h" />
-    <ClInclude Include="EventListener.h" />
-    <ClInclude Include="Floor.h" />
-    <ClInclude Include="Game.h" />
-    <ClInclude Include="GameComponent.h" />
-    <ClInclude Include="GameEntity.h" />
-    <ClInclude Include="InputManager.h" />
-    <ClInclude Include="MainScene.h" />
-    <ClInclude Include="Parallax.h" />
-    <ClInclude Include="Pipe.h" />
-    <ClInclude Include="PipeBehavior.h" />
-    <ClInclude Include="PipeHandler.h" />
+    <ClInclude Include="Headers\Assets\Enviroment\Background.h" />
+    <ClInclude Include="Headers\Assets\Bird\Bird.h" />
+    <ClInclude Include="Headers\Assets\Bird\BirdMovement.h" />
+    <ClInclude Include="Headers\Assets\Enviroment\Floor.h" />
+    <ClInclude Include="Headers\Game.h" />
+    <ClInclude Include="Headers\Entity\GameComponent.h" />
+    <ClInclude Include="Headers\Entity\GameEntity.h" />
+    <ClInclude Include="Headers\Math\Transform.h" />
+    <ClInclude Include="Headers\Math\Vector2.h" />
+    <ClInclude Include="Headers\Math\Vector3.h" />
+    <ClInclude Include="Headers\Managers\InputManager.h" />
+    <ClInclude Include="Headers\Scenes\MainScene.h" />
+    <ClInclude Include="Headers\Assets\Enviroment\Parallax.h" />
+    <ClInclude Include="Headers\Assets\Pipes\Pipe.h" />
+    <ClInclude Include="Headers\Assets\Pipes\PipeBehavior.h" />
+    <ClInclude Include="Headers\Assets\Pipes\PipeHandler.h" />
     <ClInclude Include="resource.h" />
-    <ClInclude Include="Scene.h" />
-    <ClInclude Include="SpriteRenderer.h" />
-    <ClInclude Include="Time.h" />
-    <ClInclude Include="Transform.h" />
-    <ClInclude Include="Typedefs.h" />
-    <ClInclude Include="Vector2.h" />
-    <ClInclude Include="Vector3.h" />
+    <ClInclude Include="Headers\Scenes\Scene.h" />
+    <ClInclude Include="Headers\Components\SpriteRenderer.h" />
+    <ClInclude Include="Headers\Managers\Time.h" />
+    <ClInclude Include="Headers\Typedefs.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

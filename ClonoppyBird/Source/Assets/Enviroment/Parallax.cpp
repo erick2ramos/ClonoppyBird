@@ -24,19 +24,12 @@ void Parallax::Start()
 
 void Parallax::Update()
 {
-	if (player == NULL)
+	if (player->bm != NULL && player->bm->started)
 	{
-		player = (Bird*)GameEntity::Find("Bird");
-	}
-	else
-	{
-		if (player->bm->started)
+		transform->position = transform->position + (Vector2(-1, 0) * speed * Time::GetDelta());
+		if (transform->position.x + transform->scale.x * maxX < 0)
 		{
-			transform->position = transform->position + (Vector2(-1, 0) * speed * Time::GetDelta());
-			if (transform->position.x + transform->scale.x * maxX < 0)
-			{
-				transform->position.x = (float)Game::mScreenWidth;
-			}
+			transform->position.x = (float)Game::mScreenWidth;
 		}
 	}
 }

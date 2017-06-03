@@ -1,5 +1,5 @@
 #pragma once
-#include "GameEntity.h"
+#include "../Entity/GameEntity.h"
 
 class Pipe : public GameEntity
 {
@@ -7,6 +7,7 @@ public:
 	Pipe();
 	~Pipe();
 
+	void SetUp();
 	void RandomHeight();
 	void UpdateComponents();
 

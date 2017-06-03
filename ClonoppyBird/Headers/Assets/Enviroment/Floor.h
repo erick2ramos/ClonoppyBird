@@ -6,4 +6,6 @@ class Floor : public GameEntity
 public:
 	Floor();
 	~Floor();
+
+	void SetUp();
 };

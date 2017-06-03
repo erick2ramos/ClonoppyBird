@@ -6,17 +6,22 @@
 
 Floor::Floor()
 {
+	
+}
+
+Floor::~Floor()
+{
+
+}
+
+void Floor::SetUp()
+{
 	SpriteRenderer* sr = (SpriteRenderer*)AddComponent<SpriteRenderer>();
-	sr->LoadSprite("FB_Atlas.png");
+	sr->LoadSprite("Resources/FB_Atlas.png");
 	sr->origRect = new SDL_Rect({
 		584, 0,
 		336, 112
 	});
 	AddComponent<Parallax>();
 	transform.scale = Vector2(1.79, 1);
-}
-
-Floor::~Floor()
-{
-
 }

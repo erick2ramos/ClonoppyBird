@@ -40,6 +40,7 @@ public:
 				return cmp;
 			}
 		}
+		return NULL;
 	}
 
 	static GameEntity* Find(const char* name);

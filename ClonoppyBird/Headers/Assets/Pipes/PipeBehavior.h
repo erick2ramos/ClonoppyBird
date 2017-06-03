@@ -1,5 +1,7 @@
 #pragma once
 #include "GameComponent.h"
+#include "BirdMovement.h"
+#include "Bird.h"
 
 class PipeBehavior : public GameComponent
 {
@@ -13,4 +15,7 @@ public:
 
 protected:
 	void Update();
+
+private:
+	Bird* player;
 };

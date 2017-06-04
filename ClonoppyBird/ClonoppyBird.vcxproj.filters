@@ -131,6 +131,15 @@
     <ClCompile Include="Source\Components\BoxCollider.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Source\Assets\GUI\TapStart.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Components\Text.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Assets\GUI\OverlayBehavior.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="resource.h">
@@ -200,6 +209,15 @@
       <Filter>Header</Filter>
     </ClInclude>
     <ClInclude Include="Headers\Components\BoxCollider.h">
+      <Filter>Header</Filter>
+    </ClInclude>
+    <ClInclude Include="Headers\Assets\GUI\TapStart.h">
+      <Filter>Header</Filter>
+    </ClInclude>
+    <ClInclude Include="Headers\Components\Text.h">
+      <Filter>Header</Filter>
+    </ClInclude>
+    <ClInclude Include="Headers\Assets\GUI\OverlayBehavior.h">
       <Filter>Header</Filter>
     </ClInclude>
   </ItemGroup>

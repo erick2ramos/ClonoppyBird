@@ -4,7 +4,7 @@
 #include "Game.h"
 
 PipeHandler::PipeHandler(int maxPipes) :
-	GameEntity()
+	GameEntity("PHandler")
 {
 	spawnCooldown = 2.5f;
 	timer = 0.0f;
@@ -18,7 +18,14 @@ PipeHandler::PipeHandler(int maxPipes) :
 
 PipeHandler::~PipeHandler()
 {
-
+	for (int i = 0; i < maxPipes; i++)
+	{
+		GameEntity* ge = pipes.back();
+		delete ge;
+		pipes.pop_back();
+	}
+	pipes.clear();
+	player = nullptr;
 }
 
 void PipeHandler::UpdateComponents()

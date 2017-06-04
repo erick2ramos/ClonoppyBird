@@ -7,6 +7,11 @@ Bird::Bird(Vector2 &at) : GameEntity("Bird")
 	transform.position = at;
 }
 
+Bird::~Bird()
+{
+
+}
+
 void Bird::SetUp()
 {
 	transform.scale = transform.scale * 1.5f;

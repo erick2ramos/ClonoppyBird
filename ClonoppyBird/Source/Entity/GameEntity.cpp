@@ -20,17 +20,19 @@ GameEntity::GameEntity(char* name)
 
 GameEntity::~GameEntity()
 {
-	for (list<GameComponent*>::iterator it = components.begin(); it != components.end(); ++it)
+	while (components.size() > 0)
 	{
-		delete *it;
+		GameComponent* gc = components.back();
+		delete gc;
+		components.pop_back();
 	}
 }
 
-list<GameEntity*> GameEntity::gameEntities;
+vector<GameEntity*> GameEntity::gameEntities;
 
 GameEntity* GameEntity::Find(const char* name)
 {
-	for(list<GameEntity*>::iterator it = gameEntities.begin(); it != gameEntities.end(); ++it)
+	for(vector<GameEntity*>::iterator it = gameEntities.begin(); it != gameEntities.end(); ++it)
 	{
 		if (strcmp((*it)->name, name) == 0)
 		{

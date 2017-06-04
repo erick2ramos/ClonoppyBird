@@ -4,7 +4,7 @@
 #include "SpriteRenderer.h"
 #include "Parallax.h"
 
-Floor::Floor()
+Floor::Floor() : GameEntity("Floor")
 {
 	
 }

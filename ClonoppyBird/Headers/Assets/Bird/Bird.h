@@ -10,6 +10,6 @@ public:
 	BoxCollider* collider;
 
 	Bird(Vector2 &at);
-
+	~Bird();
 	void SetUp();
 };

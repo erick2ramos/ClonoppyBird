@@ -1,6 +1,7 @@
 #include "BirdMovement.h"
 #include "Bird.h"
 #include "Collider.h"
+#include "Game.h"
 
 BirdMovement::BirdMovement() : GameComponent()
 {
@@ -20,11 +21,14 @@ void BirdMovement::Start()
 
 void BirdMovement::Update()
 {
-	direction = Vector2(1, 0) * speed;
-	if (InputManager::GetTouchUp())
+	if (!gameOver) 
 	{
-		started = true;
-		velocity.y = speed;
+		direction = Vector2(1, 0) * speed;
+		if (InputManager::GetTouchUp())
+		{
+			started = true;
+			velocity.y = speed;
+		}
 	}
 
 	ProcessMovement();
@@ -43,7 +47,13 @@ void BirdMovement::ProcessMovement()
 		}
 		else
 		{
+			gameOver = true;
 			started = false;
 		}
+	}
+
+	if (gameOver) 
+	{
+		Game::ResetScene();
 	}
 }

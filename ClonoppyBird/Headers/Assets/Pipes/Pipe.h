@@ -12,5 +12,5 @@ public:
 	void UpdateComponents();
 
 private:
-	GameEntity pipeHolder[2];
+	GameEntity* pipeHolder[2];
 };

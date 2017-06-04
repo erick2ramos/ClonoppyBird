@@ -18,6 +18,6 @@ public:
 
 protected:
 	list<GameEntity*> gameObjects;
-	
+	bool reset;
 
 };

@@ -4,7 +4,7 @@
 #include "SpriteRenderer.h"
 #include "Parallax.h"
 
-Background::Background()
+Background::Background() : GameEntity("Background")
 {
 	
 }

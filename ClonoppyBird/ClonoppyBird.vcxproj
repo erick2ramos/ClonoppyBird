@@ -78,7 +78,7 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>C:\Users\Erick\Documents\Visual Studio 2017\Projects\Clonoppy\ClonoppyBird;C:\Users\Erick\Documents\Visual Studio 2017\Projects\Clonoppy\ClonoppyBird\Headers;C:\Users\Erick\Documents\Visual Studio 2017\Projects\Clonoppy\ClonoppyBird\Headers\Scenes;C:\Users\Erick\Documents\Visual Studio 2017\Projects\Clonoppy\ClonoppyBird\Headers\Math;C:\Users\Erick\Documents\Visual Studio 2017\Projects\Clonoppy\ClonoppyBird\Headers\Managers;C:\Users\Erick\Documents\Visual Studio 2017\Projects\Clonoppy\ClonoppyBird\Headers\Entity;C:\Users\Erick\Documents\Visual Studio 2017\Projects\Clonoppy\ClonoppyBird\Headers\Components;C:\Users\Erick\Documents\Visual Studio 2017\Projects\Clonoppy\ClonoppyBird\Headers\Assets;C:\Users\Erick\Documents\Visual Studio 2017\Projects\Clonoppy\ClonoppyBird\Headers\Assets\Pipes;C:\Users\Erick\Documents\Visual Studio 2017\Projects\Clonoppy\ClonoppyBird\Headers\Assets\Enviroment;C:\Users\Erick\Documents\Visual Studio 2017\Projects\Clonoppy\ClonoppyBird\Headers\Assets\Bird;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Erick\Documents\Visual Studio 2017\Projects\Clonoppy\ClonoppyBird;C:\Users\Erick\Documents\Visual Studio 2017\Projects\Clonoppy\ClonoppyBird\Headers;C:\Users\Erick\Documents\Visual Studio 2017\Projects\Clonoppy\ClonoppyBird\Headers\Scenes;C:\Users\Erick\Documents\Visual Studio 2017\Projects\Clonoppy\ClonoppyBird\Headers\Math;C:\Users\Erick\Documents\Visual Studio 2017\Projects\Clonoppy\ClonoppyBird\Headers\Managers;C:\Users\Erick\Documents\Visual Studio 2017\Projects\Clonoppy\ClonoppyBird\Headers\Entity;C:\Users\Erick\Documents\Visual Studio 2017\Projects\Clonoppy\ClonoppyBird\Headers\Components;C:\Users\Erick\Documents\Visual Studio 2017\Projects\Clonoppy\ClonoppyBird\Headers\Assets;C:\Users\Erick\Documents\Visual Studio 2017\Projects\Clonoppy\ClonoppyBird\Headers\Assets\Pipes;C:\Users\Erick\Documents\Visual Studio 2017\Projects\Clonoppy\ClonoppyBird\Headers\Assets\Enviroment;C:\Users\Erick\Documents\Visual Studio 2017\Projects\Clonoppy\ClonoppyBird\Headers\Assets\GUI;C:\Users\Erick\Documents\Visual Studio 2017\Projects\Clonoppy\ClonoppyBird\Headers\Assets\Bird;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <AdditionalDependencies>SDL2.lib;SDL2main.lib;SDL2_image.lib;%(AdditionalDependencies)</AdditionalDependencies>
@@ -120,6 +120,8 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="01_hello_SDL.cpp" />
+    <ClCompile Include="Source\Assets\GUI\OverlayBehavior.cpp" />
+    <ClCompile Include="Source\Assets\GUI\TapStart.cpp" />
     <ClCompile Include="Source\Components\BoxCollider.cpp" />
     <ClCompile Include="Source\Assets\Enviroment\Background.cpp" />
     <ClCompile Include="Source\Assets\Bird\Bird.cpp" />
@@ -141,8 +143,11 @@
     <ClCompile Include="Source\Math\Vector3.cpp" />
     <ClCompile Include="Source\Components\SpriteRenderer.cpp" />
     <ClCompile Include="Source\Managers\Time.cpp" />
+    <ClCompile Include="Source\Components\Text.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Headers\Assets\GUI\OverlayBehavior.h" />
+    <ClInclude Include="Headers\Assets\GUI\TapStart.h" />
     <ClInclude Include="Headers\Components\BoxCollider.h" />
     <ClInclude Include="Headers\Assets\Enviroment\Background.h" />
     <ClInclude Include="Headers\Assets\Bird\Bird.h" />
@@ -166,6 +171,7 @@
     <ClInclude Include="Headers\Components\SpriteRenderer.h" />
     <ClInclude Include="Headers\Managers\Time.h" />
     <ClInclude Include="Headers\Typedefs.h" />
+    <ClInclude Include="Headers\Components\Text.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

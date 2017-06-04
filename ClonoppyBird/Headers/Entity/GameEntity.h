@@ -1,5 +1,6 @@
 #pragma once
 #include <list>
+#include <vector>
 #include <type_traits>
 #include "Typedefs.h"
 #include "GameComponent.h"
@@ -14,11 +15,11 @@ public:
 	char* name;
 	Transform transform;
 
-	static list<GameEntity*> gameEntities;
+	static vector<GameEntity*> gameEntities;
 
 	GameEntity();
 	GameEntity(char* name);
-	~GameEntity();
+	virtual ~GameEntity();
 
 	template <typename T> 
 	GameComponent* AddComponent()

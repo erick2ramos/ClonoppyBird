@@ -17,7 +17,10 @@ public:
 	static ui32 mScreenWidth;
 	static ui32 mScreenHeight;
 	static SDL_Surface* mScreenSurface;
-	Scene* currentScene;
+	static Scene* scenes[2];
+	static Scene* currentScene;
+	static Scene* nextScene;
+
 
 	SDL_Event mEvent;
 
@@ -30,6 +33,8 @@ public:
 	bool LoadMedia();
 	void Run();
 	void Close();
+	static void ChangeScene(int sceneIndex);
+	static void ResetScene();
 
 protected:
 	float lag;

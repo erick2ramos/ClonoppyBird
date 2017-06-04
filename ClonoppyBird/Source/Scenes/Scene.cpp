@@ -11,7 +11,7 @@ Scene::~Scene()
 
 void Scene::Reset()
 {
-
+	reset = true;
 }
 
 void Scene::Load()
@@ -20,6 +20,7 @@ void Scene::Load()
 	{
 		(*it)->SetUp();
 	}
+	reset = false;
 }
 
 void Scene::Unload()

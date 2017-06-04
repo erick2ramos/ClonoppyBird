@@ -14,7 +14,7 @@ public:
 	GameEntity* gameObject;
 
 	GameComponent();
-	~GameComponent();
+	virtual ~GameComponent();
 
 	virtual void Start() {};
 	void Run();

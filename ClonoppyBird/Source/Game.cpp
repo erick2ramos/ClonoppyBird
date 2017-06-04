@@ -2,12 +2,17 @@
 #include "Game.h"
 #include "MainScene.h"
 
-SDL_Renderer* Game::mRenderer = NULL;
-SDL_Window* Game::mWindow = NULL;
+SDL_Renderer* Game::mRenderer = nullptr;
+SDL_Window* Game::mWindow = nullptr;
 ui32 Game::mScreenWidth = 0;
 ui32 Game::mScreenHeight = 0;
-SDL_Surface* Game::mScreenSurface = NULL;
-
+SDL_Surface* Game::mScreenSurface = nullptr;
+Scene* Game::currentScene = nullptr;
+Scene* Game::nextScene = nullptr;
+Scene* Game::scenes[2] = {
+	new MainScene(),
+	nullptr
+};
 
 Game::Game(const int width, const int height)
 {
@@ -35,7 +40,7 @@ bool Game::Init() {
 	else
 	{
 		//Create window
-		mWindow = SDL_CreateWindow("SDL Tutorial", SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, mScreenWidth, mScreenHeight, SDL_WINDOW_SHOWN);
+		mWindow = SDL_CreateWindow("Clonoppy Bird", SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, mScreenWidth, mScreenHeight, SDL_WINDOW_SHOWN);
 		if (mWindow == NULL)
 		{
 			printf("Window could not be created! SDL_Error: %s\n", SDL_GetError());
@@ -65,8 +70,7 @@ bool Game::Init() {
 				} 
 				else
 				{
-					currentScene = new MainScene();
-					currentScene->Load();
+					currentScene = scenes[0];
 					mRunnning = true;
 				}
 			}
@@ -76,15 +80,28 @@ bool Game::Init() {
 	return success;
 }
 
+void Game::ResetScene()
+{
+	currentScene->Reset();
+}
+
+void Game::ChangeScene(int sceneIndex)
+{		
+	nextScene = scenes[sceneIndex];
+}
+
 bool Game::LoadMedia() 
 {
 	//Loading success flag
 	bool success = true;
+	currentScene->Load();
 	return success;
 }
 
 void Game::Run()
 {
+	Time::Tick();
+
 	InputManager::Init();
 	InputManager::InputPolling();
 	
@@ -96,14 +113,16 @@ void Game::Run()
 	SDL_RenderClear(mRenderer);
 	currentScene->Run();
 
-	Time::Tick();
 	lag += Time::GetDelta();
 
 	SDL_RenderPresent(mRenderer);
-	/*while (lag >= 1000)
+
+	if (nextScene != nullptr && nextScene != currentScene)
 	{
-		lag -= 1000;
-	}*/
+		currentScene->Unload();
+		currentScene = nextScene;
+		currentScene->Load();
+	}
 	//SDL_UpdateWindowSurface(mWindow);
 
 }

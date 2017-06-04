@@ -4,6 +4,7 @@
 #include "PipeHandler.h"
 #include "Floor.h"
 #include "Background.h"
+#include "TapStart.h"
 #include "Game.h"
 
 MainScene::MainScene()
@@ -17,7 +18,7 @@ MainScene::~MainScene()
 
 void MainScene::Reset()
 {
-
+	Scene::Reset();
 }
 
 void MainScene::Load()
@@ -39,9 +40,11 @@ void MainScene::Load()
 	floor2->transform.position.x = Game::mScreenWidth;
 	gameObjects.push_back(floor2);
 
-
 	Bird* bird = new Bird(Vector2(120, Game::mScreenHeight / 2));
 	gameObjects.push_back(bird);
+
+	TapStart* tapOverlay = new TapStart();
+	gameObjects.push_back(tapOverlay);
 
 	Scene::Load();
 }
@@ -55,9 +58,23 @@ void MainScene::Run()
 			(*it)->UpdateComponents();
 		}
 	}
+
+	if (reset) 
+	{
+		Unload();
+		Load();
+	}
 }
 
 void MainScene::Unload()
 {
-
+	while (gameObjects.size() > 0)
+	{
+		GameEntity* ge = gameObjects.back();
+		delete ge;
+		gameObjects.pop_back();
+	}
+	GameEntity::gameEntities.clear();
+	Collider::colliders.clear();
+	gameObjects.clear();
 }

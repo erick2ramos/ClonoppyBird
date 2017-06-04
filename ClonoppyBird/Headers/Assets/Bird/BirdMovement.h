@@ -12,7 +12,7 @@ public:
 	float terminalVelocity;
 	float speed;
 	bool started;
-
+	bool gameOver;
 
 	BirdMovement();
 	~BirdMovement();

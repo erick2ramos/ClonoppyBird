@@ -16,6 +16,7 @@ public:
 	SpriteRenderer();
 	~SpriteRenderer();
 	void LoadSprite(const char*);
+	void LoadSprite(const char*, SDL_Rect*);
 
 	void Start();
 protected:

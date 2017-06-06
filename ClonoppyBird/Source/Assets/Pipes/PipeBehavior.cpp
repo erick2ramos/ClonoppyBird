@@ -15,7 +15,7 @@ PipeBehavior::~PipeBehavior()
 
 void PipeBehavior::Start()
 {
-	speed = 150.0f;
+	speed = 170.0f;
 	player = (Bird*)GameEntity::Find("Bird");
 }
 

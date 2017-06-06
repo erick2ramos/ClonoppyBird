@@ -24,7 +24,22 @@ void SpriteRenderer::LoadSprite(const char* path)
 
 	SDL_QueryTexture(sprite, NULL, NULL, &w, &h);
 	
-	
+	SDL_FreeSurface(surface);
+}
+
+void SpriteRenderer::LoadSprite(const char* path, SDL_Rect* origin)
+{
+	SDL_Surface* surface = IMG_Load(path);
+	if (surface == NULL)
+	{
+		printf("IMG_Load: %s", IMG_GetError());
+	}
+	sprite = SDL_CreateTextureFromSurface(Game::mRenderer, surface);
+
+	origRect = origin;
+	w = origin->w;
+	h = origin->h;
+
 	SDL_FreeSurface(surface);
 }
 
@@ -39,11 +54,7 @@ void SpriteRenderer::Update()
 	{
 		int rScaleX = w * transform->scale.x,
 			rScaleY = h * transform->scale.y;
-		if (origRect != nullptr)
-		{
-			rScaleX = origRect->w * transform->scale.x;
-			rScaleY = origRect->h * transform->scale.y;
-		}
+		
 		dstRect = {
 			(int)(transform->position.x),
 			(int)(Game::mScreenHeight) - rScaleY - (int)(transform->position.y),

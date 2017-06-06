@@ -3,6 +3,7 @@
 #include "Vector2.h"
 #include "SpriteRenderer.h"
 #include "Parallax.h"
+#include "Game.h"
 
 Floor::Floor() : GameEntity("Floor")
 {
@@ -17,14 +18,14 @@ Floor::~Floor()
 void Floor::SetUp()
 {
 	SpriteRenderer* sr = (SpriteRenderer*)AddComponent<SpriteRenderer>();
-	sr->LoadSprite("Resources/FB_Atlas.png");
-	sr->origRect = new SDL_Rect({
+	sr->LoadSprite("Resources/FB_Atlas.png", new SDL_Rect({
 		584, 0,
 		336, 112
-	});
+	}));
+	sr->w = Game::mScreenWidth;
+	transform.scale = Vector2(1, 1);
 	AddComponent<Parallax>();
-	transform.scale = Vector2(1.79, 1);
-	collider = (BoxCollider*)AddComponent<BoxCollider>();
-	collider->w = 336 * transform.scale.x;
-	collider->h = 112 * transform.scale.y;
+	collider = AddComponent<BoxCollider>();
+	collider->w = sr->w * transform.scale.x;
+	collider->h = sr->h * transform.scale.y;
 }

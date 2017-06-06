@@ -6,7 +6,7 @@
 PipeHandler::PipeHandler(int maxPipes) :
 	GameEntity("PHandler")
 {
-	spawnCooldown = 2.5f;
+	spawnCooldown = 3.0f;
 	timer = 0.0f;
 
 	(*this).maxPipes = maxPipes;

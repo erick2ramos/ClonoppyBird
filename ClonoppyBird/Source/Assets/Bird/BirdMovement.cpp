@@ -6,7 +6,7 @@
 BirdMovement::BirdMovement() : GameComponent()
 {
 	gravity = Vector2(0, 1.8f * -9.8f);
-	speed = 500.0f;
+	speed = 650.0f;
 }
 
 BirdMovement::~BirdMovement()
@@ -38,7 +38,9 @@ void BirdMovement::ProcessMovement()
 {
 	if(started)
 	{
-		if (!Collider::CheckCollisions(((Bird*)gameObject)->collider))
+		if (!Collider::CheckCollisions(((Bird*)gameObject)->collider) &&
+			transform->position.y < Game::mScreenHeight &&
+			transform->position.y > 0.0f)
 		{
 			velocity = (velocity + gravity * 50.0f * Time::GetDelta());
 			direction = direction + velocity;

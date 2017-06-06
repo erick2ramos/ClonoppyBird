@@ -16,9 +16,9 @@ Parallax::~Parallax()
 void Parallax::Start()
 {
 	sr = gameObject->GetComponent<SpriteRenderer>();
-	speed = 150.0f;
-	minX = sr->origRect->w / 2;
-	maxX = sr->origRect->w;
+	speed = 170.0f;
+	minX = sr->w / 2;
+	maxX = sr->w;
 	player = (Bird*)GameEntity::Find("Bird");
 }
 

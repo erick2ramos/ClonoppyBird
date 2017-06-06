@@ -51,13 +51,7 @@ void MainScene::Load()
 
 void MainScene::Run()
 {
-	for (std::list<GameEntity*>::iterator it = gameObjects.begin(); it != gameObjects.end(); ++it)
-	{
-		if ((*it)->active)
-		{
-			(*it)->UpdateComponents();
-		}
-	}
+	Scene::Run();
 
 	if (reset) 
 	{

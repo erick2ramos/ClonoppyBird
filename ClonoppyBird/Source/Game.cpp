@@ -1,6 +1,9 @@
 #include <stdio.h>
 #include "Game.h"
 #include "MainScene.h"
+#include "MainMenuScene.h"
+#include <SDL_ttf.h>
+#include <algorithm>
 
 SDL_Renderer* Game::mRenderer = nullptr;
 SDL_Window* Game::mWindow = nullptr;
@@ -10,8 +13,8 @@ SDL_Surface* Game::mScreenSurface = nullptr;
 Scene* Game::currentScene = nullptr;
 Scene* Game::nextScene = nullptr;
 Scene* Game::scenes[2] = {
-	new MainScene(),
-	nullptr
+	new MainMenuScene(),
+	new MainScene()
 };
 
 Game::Game(const int width, const int height)
@@ -40,6 +43,13 @@ bool Game::Init() {
 	else
 	{
 		//Create window
+#ifdef __ANDROID__
+		//Uncomment to change screen size of android
+		SDL_DisplayMode DM;
+		SDL_GetCurrentDisplayMode(0, &DM);
+		mScreenWidth = std::max(DM.w, (int) mScreenWidth);
+		mScreenHeight = std::max(DM.h, (int)mScreenHeight);
+#endif
 		mWindow = SDL_CreateWindow("Clonoppy Bird", SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, mScreenWidth, mScreenHeight, SDL_WINDOW_SHOWN);
 		if (mWindow == NULL)
 		{
@@ -68,6 +78,12 @@ bool Game::Init() {
 					printf("SDL_image couldn't initialize: %s", IMG_GetError());
 					success = false;
 				} 
+
+				if (TTF_Init() == -1)
+				{
+					printf("SDL_ttf could not initialize! SDL_ttf Error: %s\n", TTF_GetError());
+					success = false;
+				}
 				else
 				{
 					currentScene = scenes[0];
@@ -138,5 +154,7 @@ void Game::Close()
 	mWindow = NULL;
 
 	//Quit SDL subsystems
+	TTF_Quit();
+	IMG_Quit();
 	SDL_Quit();
 }

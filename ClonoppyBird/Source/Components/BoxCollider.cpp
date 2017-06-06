@@ -30,14 +30,17 @@ bool BoxCollider::CollideWith(Collider* other)
 	RightS = LeftS + ((BoxCollider*)other)->w;
 	topS = BottomS + ((BoxCollider*)other)->h;
 
-	if (y >= topS)
-		return false;
-	if (TopF <= BottomS)
-		return false;
-	if (RightF <= LeftS)
-		return false;
-	if (x >= RightS)
+	if (y >= topS || TopF <= BottomS ||
+		RightF <= LeftS || x >= RightS)
 		return false;
 
+	return true;
+}
+
+bool BoxCollider::IsPointInside(Vector2& point)
+{
+	if (point.x > x + w || point.x < x
+		|| point.y > y + h || point.y < y)
+		return false;
 	return true;
 }

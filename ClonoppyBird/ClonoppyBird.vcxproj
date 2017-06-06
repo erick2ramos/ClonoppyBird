@@ -81,7 +81,7 @@
       <AdditionalIncludeDirectories>C:\Users\Erick\Documents\Visual Studio 2017\Projects\Clonoppy\ClonoppyBird;C:\Users\Erick\Documents\Visual Studio 2017\Projects\Clonoppy\ClonoppyBird\Headers;C:\Users\Erick\Documents\Visual Studio 2017\Projects\Clonoppy\ClonoppyBird\Headers\Scenes;C:\Users\Erick\Documents\Visual Studio 2017\Projects\Clonoppy\ClonoppyBird\Headers\Math;C:\Users\Erick\Documents\Visual Studio 2017\Projects\Clonoppy\ClonoppyBird\Headers\Managers;C:\Users\Erick\Documents\Visual Studio 2017\Projects\Clonoppy\ClonoppyBird\Headers\Entity;C:\Users\Erick\Documents\Visual Studio 2017\Projects\Clonoppy\ClonoppyBird\Headers\Components;C:\Users\Erick\Documents\Visual Studio 2017\Projects\Clonoppy\ClonoppyBird\Headers\Assets;C:\Users\Erick\Documents\Visual Studio 2017\Projects\Clonoppy\ClonoppyBird\Headers\Assets\Pipes;C:\Users\Erick\Documents\Visual Studio 2017\Projects\Clonoppy\ClonoppyBird\Headers\Assets\Enviroment;C:\Users\Erick\Documents\Visual Studio 2017\Projects\Clonoppy\ClonoppyBird\Headers\Assets\GUI;C:\Users\Erick\Documents\Visual Studio 2017\Projects\Clonoppy\ClonoppyBird\Headers\Assets\Bird;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
-      <AdditionalDependencies>SDL2.lib;SDL2main.lib;SDL2_image.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>SDL2.lib;SDL2main.lib;SDL2_ttf.lib;SDL2_image.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <SubSystem>Console</SubSystem>
     </Link>
   </ItemDefinitionGroup>
@@ -119,8 +119,10 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="01_hello_SDL.cpp" />
+    <ClCompile Include="Headers\Assets\GUI\PlayButtonBehavior.h" />
+    <ClCompile Include="Main.cpp" />
     <ClCompile Include="Source\Assets\GUI\OverlayBehavior.cpp" />
+    <ClCompile Include="Source\Assets\GUI\PlayButtonBehavior.cpp" />
     <ClCompile Include="Source\Assets\GUI\TapStart.cpp" />
     <ClCompile Include="Source\Components\BoxCollider.cpp" />
     <ClCompile Include="Source\Assets\Enviroment\Background.cpp" />
@@ -132,6 +134,7 @@
     <ClCompile Include="Source\Entity\GameComponent.cpp" />
     <ClCompile Include="Source\Entity\GameEntity.cpp" />
     <ClCompile Include="Source\Managers\InputManager.cpp" />
+    <ClCompile Include="Source\Scenes\MainMenuScene.cpp" />
     <ClCompile Include="Source\Scenes\MainScene.cpp" />
     <ClCompile Include="Source\Assets\Enviroment\Parallax.cpp" />
     <ClCompile Include="Source\Assets\Pipes\Pipe.cpp" />
@@ -161,6 +164,7 @@
     <ClInclude Include="Headers\Math\Vector2.h" />
     <ClInclude Include="Headers\Math\Vector3.h" />
     <ClInclude Include="Headers\Managers\InputManager.h" />
+    <ClInclude Include="Headers\Scenes\MainMenuScene.h" />
     <ClInclude Include="Headers\Scenes\MainScene.h" />
     <ClInclude Include="Headers\Assets\Enviroment\Parallax.h" />
     <ClInclude Include="Headers\Assets\Pipes\Pipe.h" />

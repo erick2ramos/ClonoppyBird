@@ -1,13 +1,10 @@
-/*This source code copyrighted by Lazy Foo' Productions (2004-2015)
-and may not be redistributed without written permission.*/
-
-//Using SDL and standard IO
 #include <stdio.h>
+#include <SDL.h>
 #include "Game.h"
 
 //Screen dimension constants
-const int SCREEN_WIDTH = 600;
-const int SCREEN_HEIGHT = 800;
+int SCREEN_WIDTH = 600;
+int SCREEN_HEIGHT = 800;
 
 int main( int argc, char* args[] )
 {

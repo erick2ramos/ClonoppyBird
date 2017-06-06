@@ -1,4 +1,5 @@
 #include "InputManager.h"
+#include "Game.h"
 
 Vector2 InputManager::pointerPosition = Vector2();
 bool InputManager::isTouchUp = false;
@@ -27,12 +28,19 @@ void InputManager::InputPolling()
 					isEscPressed = true;
 				break;
 			}
-			case SDL_MOUSEBUTTONUP:
 			case SDL_FINGERUP:
 			{
 				isTouchUp = true;
-				pointerPosition.x = mEvent.tfinger.x;
-				pointerPosition.y = mEvent.tfinger.y;
+				pointerPosition.x = mEvent.tfinger.x * Game::mScreenWidth;
+				pointerPosition.y = mEvent.tfinger.y * Game::mScreenHeight;
+				printf("x = %d, y = %d", pointerPosition.x, pointerPosition.y);
+				break;
+			}
+			case SDL_MOUSEBUTTONUP:
+			{
+				isTouchUp = true;
+				pointerPosition.x = mEvent.button.x;//mEvent.tfinger.x;
+				pointerPosition.y = mEvent.button.y;//mEvent.tfinger.y;
 				break;
 			}
 		}

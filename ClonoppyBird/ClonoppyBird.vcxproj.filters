@@ -65,9 +65,6 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="01_hello_SDL.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="Source\Assets\Bird\Bird.cpp">
       <Filter>Source Files\Assets\Bird</Filter>
     </ClCompile>
@@ -138,6 +135,18 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Source\Assets\GUI\OverlayBehavior.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Scenes\MainMenuScene.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Assets\GUI\PlayButtonBehavior.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Headers\Assets\GUI\PlayButtonBehavior.h">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -218,6 +227,9 @@
       <Filter>Header</Filter>
     </ClInclude>
     <ClInclude Include="Headers\Assets\GUI\OverlayBehavior.h">
+      <Filter>Header</Filter>
+    </ClInclude>
+    <ClInclude Include="Headers\Scenes\MainMenuScene.h">
       <Filter>Header</Filter>
     </ClInclude>
   </ItemGroup>

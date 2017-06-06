@@ -24,7 +24,7 @@ void Parallax::Start()
 
 void Parallax::Update()
 {
-	if (player->bm != NULL && player->bm->started)
+	if (player != NULL && player->bm != NULL && player->bm->started)
 	{
 		transform->position = transform->position + (Vector2(-1, 0) * speed * Time::GetDelta());
 		if (transform->position.x + transform->scale.x * maxX < 0)

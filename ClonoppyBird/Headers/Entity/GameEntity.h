@@ -22,9 +22,9 @@ public:
 	virtual ~GameEntity();
 
 	template <typename T> 
-	GameComponent* AddComponent()
+	T* AddComponent()
 	{
-		GameComponent *newComponent = new T();
+		T *newComponent = new T();
 		newComponent->transform = &transform;
 		newComponent->gameObject = this;
 		newComponent->Start();

@@ -17,8 +17,8 @@ public:
 	BirdMovement();
 	~BirdMovement();
 
-protected:
 	void Start();
+protected:
 	void Update();
 
 private:

@@ -9,7 +9,7 @@ class Scene
 {
 public:
 	Scene();
-	~Scene();
+	virtual ~Scene();
 
 	virtual void Reset();
 	virtual void Load();

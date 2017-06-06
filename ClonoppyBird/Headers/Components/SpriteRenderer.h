@@ -17,7 +17,7 @@ public:
 	~SpriteRenderer();
 	void LoadSprite(const char*);
 
-protected:
 	void Start();
+protected:
 	void Update();
 };
